@@ -1,6 +1,6 @@
 ## User Guide
 
-JARVIS is a desktop app for CS1101S Teaching Assistants (Avengers), optimized for use via a Command Line Interface (CLI) while still having the benefits of a Graphical User Interface (GUI). If you can type fast, JARVIS can get your TA administrative tasks done faster than traditional GUI apps. 
+JARVIS is a desktop app for CS1101S Teaching Assistants (Avengers), optimized for use via a Command Line Interface (CLI) while still having the benefits of a Graphical User Interface (GUI). If you can type fast, JARVIS can get your TA administrative tasks done faster than traditional GUI apps.
 
 ### Table of Contents
 
@@ -41,7 +41,7 @@ JARVIS is a desktop app for CS1101S Teaching Assistants (Avengers), optimized fo
 
 1. Ensure you have Java 11 or above installed in your Computer.
 
-1. Download the latest JARVIS.jar from [here](https://github.com/se-edu/addressbook-level3/releases). 
+1. Download the latest JARVIS.jar from [here](https://github.com/se-edu/addressbook-level3/releases).
 
 1. Copy the file to the folder you want to use as the _home folder_ for your JARVIS.
 
@@ -55,33 +55,33 @@ JARVIS is a desktop app for CS1101S Teaching Assistants (Avengers), optimized fo
    `add -t TaskName : Adds a task named TaskName.`
    `edit -t TaskName : Marks the task named TaskName as Done.`
    `exit : Exits the app.`
-   
+
 1.  Refer to the Features below for details of each command.
 --------------------------------------------------------------------------------------------------------------------
 
 ## Features
 
 <div markdown="block" class="alert alert-info">
-   
+
 **Notes about the command format:**<br>
    * Words in UPPER_CASE are the parameters to be supplied by the user.<br>
       e.g. in `add n/NAME`, `NAME` is a parameter which can be used as add n/John Doe.
-   
+
    * Items in square brackets are optional.
       e.g `n/NAME [t/TAG]` can be used as `n/John Doe t/friend` or `as n/John Doe`.
-   
+
    * Items with …​ after them can be used multiple times including zero times.
       e.g. `[t/TAG]…​` can be used as ` ` (i.e. 0 times), `t/friend`, `t/friend t/family` etc.
-   
+
    * Parameters can be in any order.
       e.g. if the command specifies `n/NAME p/PHONE_NUMBER`, `p/PHONE_NUMBER n/NAME` is also acceptable.
-   
+
    * Commands in parentheses are optional.
       e.g. if the command specifies `add -c (NAME)`, name is an optional parameter.
-   
+
    * Commands with arrows indicate a multi-step process.
       e.g. `delete -c → 1` means that the user should enter `delete -c` first and then `1` after the prompt has been processed.`
-  
+
 **Notes about student information in JARVIS:**<br>
 Students’ names that are under the Avenger using JARVIS will be fetched automatically from sourceacademy.nus.edu.sg upon startup.
 
@@ -121,7 +121,7 @@ Adds a consultation session with a student at a specific date and time.
 Examples:
 * `add -c John Doe d/2020-09-20 t/13:30`
 * `add -c Mary Jane d/2021-01-02 t/09:15`
- 
+
 #### 2-5. Adding Mastery Checks: `add -mc`
 Adds a Mastery Check session with a student at a specific date and time.
 <br>**Format: add -mc NAME d/YYYY-MM-DD t/HH:MM**
@@ -135,7 +135,7 @@ Examples:
 Examples:
 * `edit -s John Doe t/johndoe132 e/e1234567@u.nus.edu`
 * `edit -s Mary Jane t/maryjane132 s/3`
- 
+
 #### 3-2. Marking Tasks as Done: `edit -t`
 Shows a list of tasks (todos, events, deadlines) with id numbers. If an additional tag (-t, -e, -d) is specified, the category of task corresponding to the additional tag will be shown. Then, it marks the task (todo, event, deadline) as done based on the task id specified.
 <br>**Format: edit -t
@@ -144,15 +144,15 @@ Shows a list of tasks (todos, events, deadlines) with id numbers. If an addition
 <br>          → TASKID**
 
 Examples:
-* `edit -t 
+* `edit -t
    → 3`
-* `edit -t -e 
+* `edit -t -e
    → 2`
 
 ### Deleting Information: `delete`
 #### 4-1. Deleting Tasks: `delete -t`
 Shows a list of tasks (todos, events, deadlines) with id numbers. If an additional tag (-t, -e, -d) is specified, the category of task corresponding to the additional tag will be shown. Then, it deletes the task (todo, event, deadline) based on the task id specified.
-<br> **Format: delete -t 
+<br> **Format: delete -t
 <br>           → TASKID
 <br>           delete -t -t / delete -t -e / delete -t -d
 <br>           → TASKID**
@@ -163,7 +163,7 @@ Examples:
 * `delete -t -d
    → 2`
 
- 
+
 #### 4-2 Deleting Consultations: `delete -c (NAME)`
 Shows a list of consultations with id numbers which can be entered by the user to specify and delete a session. If a student name is entered after the command, it shows only the sessions with the specific student.
 <br>**Format: delete -c (NAME)**
@@ -187,7 +187,7 @@ Shows a list of all students under the tutor in JARVIS.
 <br>**Format: `view`**
 
 #### 5-1 Viewing a list of all students: `view -s (NAME)`
-Shows a list of all students under the tutor in JARVIS. If a student name is entered after the command, it shows all details(contact information, consultation requests and studio participation marks) of a specific student. 
+Shows a list of all students under the tutor in JARVIS. If a student name is entered after the command, it shows all details(contact information, consultation requests and studio participation marks) of a specific student.
 <br>**Format: view -s**
 
 #### 5-2. Viewing all consultation requests of a student: `view -s -c (NAME)`
@@ -260,7 +260,7 @@ Examples:
 
 #### 5-14. Viewing Tasks: `view -t`
 Shows a list of tasks (todos, events, deadlines). If an additional tag (-t, -e, -d) is specified, the category of task corresponding to the additional tag will be shown.
-<br>**Format: view -t 
+<br>**Format: view -t
 <br>          view -t -t / view -t -e / view -t -d**
 Examples:
 * `view -t`
@@ -314,7 +314,7 @@ JARVIS data are saved in the hard disk automatically after any command that chan
 | -mc | view -mc (NAME) <br>E.g. view -mc / view -mc John Doe |
 | -mcp | view -mcp (NAME) <br>E.g. view -mcp / view -mcp John Doe |
 | -mcu | view -mcu (NAME) <br>E.g. view -mcu / view -mcu John Doe |
--u |view -u | 
+-u |view -u |
 -m | view -m |
 -q | view -q |
 -b | view -b |
